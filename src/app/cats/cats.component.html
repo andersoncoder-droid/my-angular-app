@@ -1,1 +1,15 @@
-<p>cats works!</p>
+<div class="text-center">
+  <h2>Gatos disponibles para adopción</h2>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let cat of cats">
+      <div class="card mb-3">
+        <img [src]="cat.image" class="card-img-top" alt="{{ cat.name }}" />
+        <div class="card-body">
+          <h5 class="card-title">{{ cat.name }}</h5>
+          <p class="card-text">Edad: {{ cat.age }} años</p>
+          <p class="card-text">Personalidad: {{ cat.personality }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

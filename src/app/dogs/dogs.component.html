@@ -1,1 +1,15 @@
-<p>dogs works!</p>
+<div class="text-center">
+  <h2>Perros disponibles para adopción</h2>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let dog of dogs">
+      <div class="card mb-3">
+        <img [src]="dog.image" class="card-img-top" alt="{{ dog.name }}" />
+        <div class="card-body">
+          <h5 class="card-title">{{ dog.name }}</h5>
+          <p class="card-text">Edad: {{ dog.age }} años</p>
+          <p class="card-text">Personalidad: {{ dog.personality }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

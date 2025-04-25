@@ -1,12 +1,125 @@
-<h1 class="MainTitle">El que lea es gay</h1>
+<nav class="navbar navbar-expand-lg bg-light shadow p-3 mb-4 rounded">
+  <div class="container-fluid">
+    <a
+      class="navbar-brand fw-bold text-primary d-flex align-items-center"
+      routerLink="/"
+    >
+      <img
+        src="assets/img/logo-pets.png"
+        alt="Logo de Patitas Felices"
+        width="80"
+        height="80"
+        class="d-inline-block align-top me-2"
+      />
+      Patitas Felices
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link text-dark"
+            [routerLink]="['/']"
+            routerLinkActive="active"
+            >Inicio</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link text-dark"
+            [routerLink]="['/cats']"
+            routerLinkActive="active"
+            >Gatos</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link text-dark"
+            [routerLink]="['/dogs']"
+            routerLinkActive="active"
+            >Perros</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link text-dark"
+            [routerLink]="['/contact']"
+            routerLinkActive="active"
+            >Contacto</a
+          >
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle text-dark"
+            href="#"
+            id="moreDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Más
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="moreDropdown">
+            <li><a class="dropdown-item" href="#">Voluntariado</a></li>
+            <li><a class="dropdown-item" href="#">Donaciones</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#">Historias de éxito</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Buscar"
+          aria-label="Buscar"
+        />
+        <button class="btn btn-outline-primary" type="submit">Buscar</button>
+      </form>
+    </div>
+  </div>
+</nav>
 
-<button type="button" class="btn btn-outline-primary">Primary</button>
-<button type="button" class="btn btn-outline-secondary">Secondary</button>
-<button type="button" class="btn btn-outline-success">Success</button>
-<button type="button" class="btn btn-outline-danger">Danger</button>
-<button type="button" class="btn btn-outline-warning">Warning</button>
-<button type="button" class="btn btn-outline-info">Info</button>
-<button type="button" class="btn btn-outline-light">Light</button>
-<button type="button" class="btn btn-outline-dark">Dark</button>
+<div class="container mt-4">
+  <router-outlet></router-outlet>
+</div>
 
-<router-outlet />
+<!-- Footer -->
+<div class="row mt-5 bg-primary text-white text-center py-4">
+  <div class="col-md-4">
+    <h5>Contacto</h5>
+    <p>Email: info.org</p>
+    <p>Tel: +34 123 456 789</p>
+  </div>
+  <div class="col-md-4">
+    <h5>Síguenos</h5>
+    <a href="#" class="text-white me-2"
+      ><i class="fab fa-facebook-f fa-lg"></i
+    ></a>
+    <a href="#" class="text-white me-2"
+      ><i class="fab fa-instagram fa-lg"></i
+    ></a>
+    <a href="#" class="text-white"><i class="fab fa-twitter fa-lg"></i></a>
+  </div>
+  <div class="col-md-4">
+    <h5>Ubicación</h5>
+    <p>Calle Esperanza 123, Bogota, Colombia</p>
+  </div>
+</div>
+
+<!-- Scripts de Bootstrap y Font Awesome -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"
+  crossorigin="anonymous"
+></script>
